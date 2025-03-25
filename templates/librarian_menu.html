@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Librarian Menu</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+        <div class="container mt-5">
+                <h1 class="text-center">Librarian Menu: </h1>
+                <div class="row justify-content-center mt-4">
+                        <div class="col-md-6">
+                                <form action="/add_book" method="POST" class="mb-3">
+                                        <h3>1. Add a New Book</h3>
+                                        <input type="text" name="book_name" class="form-control mb-2" placeholder="Enter Book's Title:">
+                                        <input type="text" name="author_name" class="form-control mb-2" placeholder="please enter author: ">
+                                        <button type="submit" class="btn btn-primary">Add Book</button>
+                                </form>
+                                <form action="/update_book" method="POST" class="mb-3">
+                                        <h3>2. Update Book details</h3>
+                                        <input type="text" name="book_name" class="form-control mb-2" placeholder="Enter Book's Title to update:">
+                                        <input type="text" name="new_author" class="form-control mb-2" placeholder="Enter new author: ">
+                                        <button type="submit" class="btn btn-warning">Update Book</button>
+                                </form>
+                                <form action="/remove_book" method="POST" class="mb-3">
+                                        <h3>3. Remove a Book</h3>
+                                        <input type="text" name="remove_book" class="form-control mb-2" placeholder="Enter Book's title: ">
+                                        <button type="submit" class="btn btn-danger">Remove Book</button>
+                                </form>
+                                <a href="/view_book" class="btn btn-info d-block mb-3">4. View All Books</a>
+                                <a href="/manage_member" class="btn btn-success d-block mb-3">5. Manage Members:</a>
+                                <a href="/" class="btn btn-secondary d-block">6. Exit</a>
+                        </div>
+                </div>
+        </div>
+</body>
+</html>
